@@ -2,7 +2,7 @@
 
 Complete Google Fit integration with OAuth 2.0, automatic data syncing, and real-time updates.
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Install dependencies**
    ```bash
@@ -25,15 +25,15 @@ Complete Google Fit integration with OAuth 2.0, automatic data syncing, and real
    npm run dev
    ```
 
-## 📋 Features
+## Features
 
-### ✅ Complete OAuth 2.0 Flow
+### Complete OAuth 2.0 Flow
 - Secure Google authentication
 - Automatic token refresh
 - No manual re-login required
 - Token expiration handling
 
-### ✅ Comprehensive Health Data
+### Comprehensive Health Data
 - **Steps** - Daily and hourly tracking
 - **Calories** - Total expenditure
 - **Heart Points** - Active minutes
@@ -43,21 +43,21 @@ Complete Google Fit integration with OAuth 2.0, automatic data syncing, and real
 - **Heart Rate** - BPM tracking
 - **Nutrition** - Dietary data
 
-### ✅ Automatic Syncing
+### Automatic Syncing
 - Runs every 15 minutes
 - Fetches last 24 hours of data
 - Real-time Socket.IO updates
 - Rate limiting & error handling
 - Retry logic with backoff
 
-### ✅ REST API
+### REST API
 - Get daily aggregated data
 - Get hourly breakdown
 - Get activities/sessions
 - Manual sync trigger
 - User profile endpoint
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -80,7 +80,7 @@ backend/
 └── package.json
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -116,7 +116,7 @@ GOOGLE_OAUTH_REDIRECT=http://localhost:5000/api/auth/google/callback
 
 See [GOOGLE_FIT_SETUP.md](./GOOGLE_FIT_SETUP.md) for detailed instructions.
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `GET /api/auth/google/url` - Get OAuth URL
@@ -133,7 +133,7 @@ See [GOOGLE_FIT_SETUP.md](./GOOGLE_FIT_SETUP.md) for detailed instructions.
 
 See [API_REFERENCE.md](./API_REFERENCE.md) for full documentation.
 
-## 📊 Data Flow
+## Data Flow
 
 ```
 User → Frontend → OAuth URL → Google OAuth
@@ -157,7 +157,7 @@ User → Frontend → OAuth URL → Google OAuth
                     Socket.IO → Real-time updates → Frontend
 ```
 
-## 🔄 Sync Job
+## Sync Job
 
 Automatic data synchronization:
 - **Schedule**: Every 15 minutes (configurable)
@@ -171,7 +171,7 @@ Configure in `src/syncJob.js`:
 cron.schedule("*/15 * * * *", async () => { ... });
 ```
 
-## 🗃️ Database Schema
+## Database Schema
 
 ```javascript
 User {
@@ -210,7 +210,7 @@ User {
 }
 ```
 
-## 🔐 Security
+## Security
 
 - JWT-based authentication
 - Secure token storage
@@ -220,23 +220,7 @@ User {
 - Input validation
 - Error sanitization
 
-## 🧪 Testing
-
-```bash
-# Get OAuth URL
-curl http://localhost:5000/api/auth/google/url
-
-# Get fitness data (with token)
-curl -H "Authorization: Bearer YOUR_TOKEN" \
-     http://localhost:5000/api/fitness/today
-
-# Manual sync
-curl -X POST \
-     -H "Authorization: Bearer YOUR_TOKEN" \
-     http://localhost:5000/api/fitness/sync
-```
-
-## 📦 Dependencies
+## Dependencies
 
 - **express** - Web framework
 - **mongoose** - MongoDB ODM
@@ -247,7 +231,7 @@ curl -X POST \
 - **dotenv** - Environment configuration
 - **cors** - Cross-origin requests
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### No data returned
 - Check if user has data in Google Fit app
@@ -269,13 +253,8 @@ curl -X POST \
 - Increase delay between users
 - Check API quota in Google Console
 
-## 📚 Documentation
 
-- [GOOGLE_FIT_SETUP.md](./GOOGLE_FIT_SETUP.md) - Complete setup guide
-- [API_REFERENCE.md](./API_REFERENCE.md) - API documentation
-- [Google Fitness API Docs](https://developers.google.com/fit)
-
-## 🛠️ Development
+## Development
 
 ```bash
 # Start in development mode
@@ -285,7 +264,7 @@ npm run dev
 npm start
 ```
 
-## 📝 Scripts
+##  Scripts
 
 ```json
 {
@@ -294,7 +273,7 @@ npm start
 }
 ```
 
-## 🌐 Production Deployment
+## Production Deployment
 
 1. Set `NODE_ENV=production`
 2. Use HTTPS for all endpoints
@@ -305,7 +284,7 @@ npm start
 7. Set up monitoring & logging
 8. Configure rate limiting
 
-## 👤 Author
+## Author
 
 Sumrun Fatima
 
