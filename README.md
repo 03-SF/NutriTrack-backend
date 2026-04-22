@@ -305,14 +305,8 @@ npm start
 7. Set up monitoring & logging
 8. Configure rate limiting
 
-## 📄 License
-
-ISC
-
 ## 👤 Author
 
-NutriTrack AI Team
+Sumrun Fatima
+Muhammad Hassan Khan
 
----
-
-**Need help?** Check the documentation files or review the Google Fitness API docs.
