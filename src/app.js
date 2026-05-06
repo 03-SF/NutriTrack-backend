@@ -68,6 +68,22 @@ app.use(
 );
 
 // ================== HEALTH CHECK ==================
+app.get("/", (req, res) => res.json({ 
+  message: "NutriTrack API Server",
+  status: "running",
+  version: "1.0.0",
+  endpoints: {
+    health: "/ping",
+    auth: "/api/auth",
+    fitness: "/api/fitness",
+    nutrition: "/api/nutrition",
+    profile: "/api/profile",
+    workout: "/api/workout",
+    exercise: "/api/exercise-recommendations",
+    streaks: "/api/streaks"
+  }
+}));
+
 app.get("/ping", (req, res) => res.json({ msg: "pong" }));
 
 // ================== DEBUG ROUTES (Development only) ==================
